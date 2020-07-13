@@ -1,12 +1,11 @@
-# “青年大学习”第九季第九期
+# “青年大学习”特辑
 
-BC(2分25.1秒)
-
-ABCD(8分35.3秒)
-
+A(1m37s)
+ABD(7m53.8s)
 
 
-第九期线上答题
+
+第九季第九期线上答题
 
 ```json
 {
@@ -14,35 +13,8 @@ ABCD(8分35.3秒)
 	"message": null,
 	"result": {
 		"qaId": "12",
-		"qasId": "84451FD4-13DA-4E82-98CC-475265F8F42F",
+		"qasId": "BAA9941F-6AE9-4FDD-901D-BC6AD30049D2",
 		"questions": [{
-			"queId": "1272",
-			"queTitle": "改革创新精神的内涵是        ？",
-			"queCode": "ABCD",
-			"queTime": "30",
-			"queType": "2",
-			"queTypeRemark": "多选",
-			"score": "10",
-			"startTime": "2020-07-06 19:42:47",
-			"endTime": "2022-07-06 19:42:47",
-			"items": [{
-				"queId": "1272",
-				"itemCode": "A",
-				"itemValue": "与时俱进"
-			}, {
-				"queId": "1272",
-				"itemCode": "B",
-				"itemValue": "锐意进取"
-			}, {
-				"queId": "1272",
-				"itemCode": "C",
-				"itemValue": "勤于探索"
-			}, {
-				"queId": "1272",
-				"itemCode": "D",
-				"itemValue": "勇于实践"
-			}]
-		}, {
 			"queId": "1271",
 			"queTitle": "全面深化改革总目标是         。",
 			"queCode": "BC",
@@ -68,6 +40,33 @@ ABCD(8分35.3秒)
 				"queId": "1271",
 				"itemCode": "D",
 				"itemValue": "建设美丽中国，完善生态文明体制"
+			}]
+		}, {
+			"queId": "1272",
+			"queTitle": "改革创新精神的内涵是        ？",
+			"queCode": "ABCD",
+			"queTime": "30",
+			"queType": "2",
+			"queTypeRemark": "多选",
+			"score": "10",
+			"startTime": "2020-07-06 19:42:47",
+			"endTime": "2022-07-06 19:42:47",
+			"items": [{
+				"queId": "1272",
+				"itemCode": "A",
+				"itemValue": "与时俱进"
+			}, {
+				"queId": "1272",
+				"itemCode": "B",
+				"itemValue": "锐意进取"
+			}, {
+				"queId": "1272",
+				"itemCode": "C",
+				"itemValue": "勤于探索"
+			}, {
+				"queId": "1272",
+				"itemCode": "D",
+				"itemValue": "勇于实践"
 			}]
 		}]
 	},

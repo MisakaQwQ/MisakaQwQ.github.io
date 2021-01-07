@@ -40,22 +40,30 @@
 <!--                <span style="position: absolute; bottom: -34px;left: 20px;font-size: 12px;color: #e9e7e7;text-align: center;">*建议使用火狐浏览器 <br/>版本:82.0.2(64位)</sapn>-->
 <!--            </div>-->
         </div>
-        <div class="index-page-video">
-            <div class="video-btns">
-                <button ng-click="VideoTab(0)" class="video-btn" ng-class="{true:'video-checked', false:''}[VideoChend==0]">项目简介视频</button>
-                <button ng-click="VideoTab(1)" class="video-btn" ng-class="{true:'video-checked', false:''}[VideoChend==1]">项目引导视频</button>
-            </div>
-            <!-- ./video/show.mp4 -->
-            <video src="./common/video/show.mp4" muted="muted" autoplay="autoplay" controls="controls" id="video">
-                暂无视频
-            </video>
-        </div>
+<!--        右侧视频-->
+<!--        <div class="index-page-video">-->
+<!--            <div class="video-btns">-->
+<!--                <button ng-click="VideoTab(0)" class="video-btn" ng-class="{true:'video-checked', false:''}[VideoChend==0]">项目简介视频</button>-->
+<!--                <button ng-click="VideoTab(1)" class="video-btn" ng-class="{true:'video-checked', false:''}[VideoChend==1]">项目引导视频</button>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; ./video/show.mp4 &ndash;&gt;-->
+<!--            <video src="./common/video/show.mp4" muted="muted" autoplay="autoplay" controls="controls" id="video">-->
+<!--                暂无视频-->
+<!--            </video>-->
+<!--        </div>-->
     </div>
 </header>
 <div class="index-page-content">
     <div class="index-page-content-buittons">
         <div class="index-page-content-btns">
-            <span ng-class="{true :'btn-active', false :'tag'}[btnsVariable==$index]" ng-click="tagBtn($index,tag.sign)" ng-repeat="tag in tagBtns track by $index">{{tag.name}}</span>
+            <span ng-class="{true :'btn-active', false :'tag'}[btnsVariable==$index]" ng-repeat="tag in tagBtns track by $index" ng-init="BtnIndex = $index">
+                <a ng-click="tagBtn($index,tag.sign)">{{tag.name}}</a>
+                <ul class="index-page-content-secondopt" ng-if="tag.child">
+                    <li ng-class="{true :'opt-active', false :'opt'}[optsVariable==$index]" ng-click="optBtn(BtnIndex,$index,option.sign)" ng-repeat="option in tag.child track by $index">
+                        <a>{{option.name}}</a>
+                    </li>
+                </ul>
+            </span>
             <div class="line"></div>
         </div>
     </div>

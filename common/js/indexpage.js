@@ -10,7 +10,11 @@ app.controller('pageCtrl', function($scope,$http) {
     $scope.tagBtns = [
         {"name":"项目团队","sign":"team"},
         {"name":"项目描述","sign":"describe"},
-        {"name":"血细胞分析","sign":"bloodcell"},
+        {"name":"血细胞分析","sign":"bloodcell",
+			"child":[{"name":"结构仿真","sign":"structure"},
+				     {"name":"管路仿真","sign":"pipe"},
+					 {"name":"电路仿真","sign":"circuit"},
+					 {"name":"光路仿真","sign":"light"}]},
         {"name":"流式细胞分析","sign":"flowcyto"},
 		{"name":"电解质分析","sign":"electrolytic"}
     ];
@@ -81,6 +85,7 @@ app.controller('pageCtrl', function($scope,$http) {
 	}
 
     $scope.btnsVariable = 0;
+	$scope.optsVariable = -1;
     $scope.initialize = function(url){
         $http({
             method: 'GET',
@@ -93,6 +98,7 @@ app.controller('pageCtrl', function($scope,$http) {
     };  
 	$scope.initialize("team");
     $scope.tagBtn = function(index,sign){
+    	  $scope.optsVariable = -1;
           $scope.btnsVariable = index;
           $scope.initialize(sign);
 		  var parent = $("iframe").parent(".index-page-content-introduce").find(".morebox").find(".more-btn");
@@ -101,6 +107,16 @@ app.controller('pageCtrl', function($scope,$http) {
 		  $("iframe").attr('sign',false)
 		  parent.removeClass("more-btn-up");
     };
+	$scope.optBtn = function(btnindex,optindex,sign){
+		$scope.optsVariable = optindex;
+		$scope.btnsVariable = btnindex;
+		$scope.initialize(sign);
+		var parent = $("iframe").parent(".index-page-content-introduce").find(".morebox").find(".more-btn");
+		$("iframe").attr("height",'290px');
+		$("iframe").attr("scrolling","no");
+		$("iframe").attr('sign',false)
+		parent.removeClass("more-btn-up");
+	};
 	$scope.showiframe = function(id){
 		var ifr = document.getElementById(id);			
 		var sign = ifr.getAttribute("sign");	

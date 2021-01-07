@@ -1,0 +1,10 @@
+{
+  "data":[
+    {
+      "text":"Welcome",
+      "src":"./data/content/team/team.html",
+      "id":"team",
+      "btn":false
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "data":[
+    {
+      "text":"管路仿真",
+      "src":"./data/content/pipe/pipe.html",
+      "id":"pipe",
+      "btn":false
+    }
+  ]
+}

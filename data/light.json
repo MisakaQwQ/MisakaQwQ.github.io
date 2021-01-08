@@ -1,0 +1,10 @@
+{
+  "data":[
+    {
+      "text":"光路仿真",
+      "src":"./data/content/light/light.html",
+      "id":"light",
+      "btn":false
+    }
+  ]
+}

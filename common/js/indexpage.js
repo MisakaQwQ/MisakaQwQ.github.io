@@ -105,6 +105,9 @@ app.controller('pageCtrl', function($scope,$http) {
 		  $("iframe").attr("height",'290px');
 		  $("iframe").attr("scrolling","no");
 		  $("iframe").attr('sign',false)
+		if ($scope.details.length == 1) {
+			$("iframe").attr("onload",'this.height=this.contentWindow.document.body.scrollHeight');
+		}
 		  parent.removeClass("more-btn-up");
     };
 	$scope.optBtn = function(btnindex,optindex,sign){
@@ -115,12 +118,15 @@ app.controller('pageCtrl', function($scope,$http) {
 		$("iframe").attr("height",'290px');
 		$("iframe").attr("scrolling","no");
 		$("iframe").attr('sign',false)
+		if ($scope.details.length == 1) {
+			$("iframe").attr("onload",'this.height=this.contentWindow.document.body.scrollHeight');
+		}
 		parent.removeClass("more-btn-up");
 	};
 	$scope.showiframe = function(id){
-		var ifr = document.getElementById(id);			
-		var sign = ifr.getAttribute("sign");	
-		var parent = $("#"+id).parent(".index-page-content-introduce").find(".morebox").find(".more-btn");	
+		var ifr = document.getElementById(id);
+		var sign = ifr.getAttribute("sign");
+		var parent = $("#"+id).parent(".index-page-content-introduce").find(".morebox").find(".more-btn");
 		var bHeight = ifr.contentWindow.document.body.scrollHeight;
 		var dHeight = ifr.contentWindow.document.documentElement.scrollHeight;
 		if(sign=="false"){
@@ -130,7 +136,7 @@ app.controller('pageCtrl', function($scope,$http) {
 			parent.addClass("more-btn-up");
 		}else{
 			ifr.height = '290px';
-			ifr.scrolling = "no"	
+			ifr.scrolling = "no"
 			ifr.setAttribute('sign',false);
 			parent.removeClass("more-btn-up");
 		}

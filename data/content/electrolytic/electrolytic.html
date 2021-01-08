@@ -8,14 +8,14 @@
     <script src="control.js"></script>
 </head>
 <body ng-app="pageApp" ng-controller="pageCtrl">
-    <div class="index-page-video">
+    <div class="index-page-video" style="height: 900px">
         <div class="video-btns">
             <button ng-click="VideoTab(0)" class="video-btn" ng-class="{true:'video-checked', false:''}[VideoChend==0]">工作原理</button>
             <button ng-click="VideoTab(1)" class="video-btn" ng-class="{true:'video-checked', false:''}[VideoChend==1]">斜率定标</button>
             <button ng-click="VideoTab(2)" class="video-btn" ng-class="{true:'video-checked', false:''}[VideoChend==2]">吸样</button>
             <button ng-click="VideoTab(3)" class="video-btn" ng-class="{true:'video-checked', false:''}[VideoChend==3]">清洗</button>
         </div>
-        <video src="principle.mp4" muted="muted" autoplay="autoplay" controls="controls" id="video">
+        <video src="principle.mp4" muted="muted" autoplay="autoplay" controls="controls" id="video" style="width: 100%">
             暂无视频
         </video>
     </div>

@@ -1,28 +1,10 @@
 {
   "data":[
     {
-      "text":"结构仿真",
-      "src":"./data/content/bloodcell/structure.html",
-      "id":"structure",
-      "btn":true
-    },
-    {
-      "text":"管路仿真",
-      "src":"./data/content/bloodcell/pipe.html",
-      "id":"pipe",
-      "btn":true
-    },
-    {
-      "text":"电路仿真",
-      "src":"./data/content/bloodcell/circuit.html",
-      "id":"circuit",
-      "btn":true
-    },
-    {
-      "text":"光路仿真",
-      "src":"./data/content/bloodcell/light.html",
-      "id":"light",
-      "btn":true
+      "text":"血细胞分析",
+      "src":"./data/content/bloodcell/bloodcell.html",
+      "id":"bloodcell",
+      "btn":false
     }
   ]
 }

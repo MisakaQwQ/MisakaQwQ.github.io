@@ -1,0 +1,10 @@
+{
+  "data":[
+    {
+      "text":"结构仿真",
+      "src":"./data/content/structure/structure.html",
+      "id":"structure",
+      "btn":false
+    }
+  ]
+}

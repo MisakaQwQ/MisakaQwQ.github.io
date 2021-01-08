@@ -213,7 +213,7 @@ header .index-page-video .video-btns .video-checked{
 .index-page-content .index-page-content-buittons .index-page-content-btns .index-page-content-secondopt{
 	display: none;
 	list-style: none;
-	top: 65px;*
+	top: 45px;*
 	overflow: visible;
 }
 .index-page-content .index-page-content-buittons .index-page-content-btns .line{
@@ -261,19 +261,29 @@ header .index-page-video .video-btns .video-checked{
 	font-size: 14px;
 	color: #727171;
 }
+.index-page-content .index-page-content-buittons .index-page-content-btns .index-page-content-secondopt{
+	background: #ffffff;
+}
+.index-page-content .index-page-content-buittons .index-page-content-btns .index-page-content-secondopt li:hover{
+	display: block;
+}
 .index-page-content .index-page-content-buittons .index-page-content-btns .index-page-content-secondopt .opt-active a{
+	background: #ffffff;
 	font-size: 16px;
 	font-weight: 700;
 	color: #99c30a;
 }
 .index-page-content .index-page-content-buittons .index-page-content-btns .index-page-content-secondopt .opt a{
+	font-weight: unset;
+	background: #ffffff;
 	font-size: 14px;
 	color: #727171;
 }
-.index-page-content .index-page-content-buittons .index-page-content-btns .btn:hover{
-	background-color:#4b78e5 ;
-	color: #ffffff;
-	box-shadow: 2px 2px 4px rgba(73, 118, 232, .44);	
+.index-page-content .index-page-content-buittons .index-page-content-btns span a:hover{
+	color: #99c30a;
+}
+.index-page-content .index-page-content-buittons .index-page-content-btns .index-page-content-secondopt a:hover{
+	color: #99c30a;
 }
 
 .index-page-content .index-page-content-details {

@@ -1,0 +1,10 @@
+{
+  "data":[
+    {
+      "text":"电路仿真",
+      "src":"./data/content/circuit/circuit.html",
+      "id":"circuit",
+      "btn":false
+    }
+  ]
+}

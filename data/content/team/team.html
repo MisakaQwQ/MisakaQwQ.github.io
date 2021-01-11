@@ -25,7 +25,6 @@
             border-bottom: 3px solid #f13a3a;
         }
         .description-text{
-
             color: #f13a3a;
             font-weight: normal;
             font-size: 16px;
@@ -41,20 +40,23 @@
             border-bottom: 2px solid rgba(255, 255, 255, 0.3);
         }
         .content{
-            text-align: left;
-            padding-left:2em;
+            display: inline-block;
+            align-content: center;
+            font-size: 22px;
         }
     </style>
 </head>
 <body>
-<div class="main_content" style="height: 200px">
+<div class="main_content" style="height: 300px">
     <div class="description">
         <div class="description-content">
             <span class="description-text">团队主要成员</span>
         </div>
     </div>
     <div class="line"></div>
-    <table border="1">
+
+    <div class="content"><br>
+    <table border="1" class="table-content">
         <tr>
             <th>序号</th>
             <th>姓名</th>
@@ -91,6 +93,7 @@
             <td>实验员</td>
         </tr>
     </table>
+    </div>
 </div>
 </body>
 </html>

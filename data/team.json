@@ -1,7 +1,7 @@
 {
   "data":[
     {
-      "text":"Welcome",
+      "text":"项目团队",
       "src":"./data/content/team/team.html",
       "id":"team",
       "btn":false

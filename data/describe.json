@@ -1,7 +1,7 @@
 {
   "data":[
     {
-      "text":"Describe",
+      "text":"项目描述",
       "src":"./data/content/describe/describe.html",
       "id":"Describe",
       "btn":false

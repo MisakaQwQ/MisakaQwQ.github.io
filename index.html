@@ -72,7 +72,7 @@
             <div class="incharge-details" ng-repeat="text in details track by $index">
                 <p class="part-title" ng-bind="text.text"></p>
                 <div class="index-page-content-introduce" ng-hide="text.src==null">
-                    <iframe class="index-page-content-iframe" ng-src="{{text.src}}" scrolling="no" align="left" id="{{text.id}}" sign='false' style="width: 100%">
+                    <iframe class="index-page-content-iframe" ng-src="{{text.src}}" scrolling="no" align="left" id="{{text.id}}" sign='false' style="width: 100%" onload="this.height=this.contentWindow.document.body.scrollHeight+100">
                         您的浏览器不支持嵌入式框架，或者当前配置为不显示嵌入式框架。
                     </iframe>
                     <div class="morebox" ng-show="text.btn">

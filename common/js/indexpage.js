@@ -8,8 +8,8 @@ app.controller('pageCtrl', function($scope,$http) {
     $scope.lastName= "Doe";
 	$scope.topup = false;
     $scope.tagBtns = [
+		{"name":"项目描述","sign":"describe"},
         {"name":"项目团队","sign":"team"},
-        {"name":"项目描述","sign":"describe"},
         {"name":"血细胞分析","sign":"bloodcell",
 			"child":[{"name":"结构仿真","sign":"structure"},
 				     {"name":"管路仿真","sign":"pipe"},
@@ -96,7 +96,7 @@ app.controller('pageCtrl', function($scope,$http) {
 
         });
     };  
-	$scope.initialize("team");
+	$scope.initialize("describe");
     $scope.tagBtn = function(index,sign){
     	  $scope.optsVariable = -1;
           $scope.btnsVariable = index;

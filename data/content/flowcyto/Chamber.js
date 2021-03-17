@@ -1,5 +1,5 @@
 function Chamber(){
-    this.flow = 0
+    this.flow = -50
     this.posa = 105
     this.posb = 70
     this.posc = 35
@@ -7,7 +7,7 @@ function Chamber(){
 
 
     this.update = function (){
-        if(this.flow<=120){
+        if(this.flow<=100){
             this.flow+=1
         }
         else{
@@ -15,10 +15,10 @@ function Chamber(){
             this.posb+=1
             this.posc+=1
             this.posd+=1
-            this.posa%=140
-            this.posb%=140
-            this.posc%=140
-            this.posd%=140
+            this.posa%=135
+            this.posb%=135
+            this.posc%=135
+            this.posd%=135
         }
     }
 
@@ -26,10 +26,10 @@ function Chamber(){
         tint(255,128)
         image(test_flow, 141, 40+this.flow)
 
-        tmpa = 130+this.posa+this.flow
-        tmpb = 130+this.posb+this.flow
-        tmpc = 130+this.posc+this.flow
-        tmpd = 130+this.posd+this.flow
+        tmpa = 140+this.posa+this.flow
+        tmpb = 140+this.posb+this.flow
+        tmpc = 140+this.posc+this.flow
+        tmpd = 140+this.posd+this.flow
 
         image(particleA, 144, tmpa, 25,25)
         image(particleB, 144, tmpb,25,25)

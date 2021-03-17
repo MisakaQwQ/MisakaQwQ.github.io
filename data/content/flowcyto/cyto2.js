@@ -25,6 +25,7 @@ function setup(){
     particleD = loadImage("./assert/ParticleD.svg")
 
     tube_mask = loadImage("./assert/tube_mask.png")
+    chamber_mask = loadImage("./assert/chamber_mask.png")
 
     laser = new Laser()
     tubes = []
@@ -56,4 +57,5 @@ function draw() {
     }
     tint(255,255)
     image(tube_mask, 7,42)
+    image(chamber_mask, 141,363)
 }

@@ -1,5 +1,5 @@
 function Chamber(){
-    this.flow = -50
+    this.flow = -25
     this.posa = 105
     this.posb = 70
     this.posc = 35
@@ -45,40 +45,27 @@ function Chamber(){
         if(tmpb>=315 && tmpb<=355) {
             // YELLOW
             tint(255, 255/20*(20-Math.abs(tmpb-335)))
-            image(spot, 130, 321)
             image(particleB, 273, 45, 25,25)
-            image(Y_XY_M, 158, 275)
-            image(Y_M, 245, 275)
-            image(Y_XY_S, 158, 250)
-            image(Y_X_S, 245, 260)
-            image(Y_D, 370, 240)
+            image(Yellow_beam_xy, 122, 257,146,97)
+            image(Yellow_beam_x, 243, 247)
+            image(spot, 130, 321)
         }
         if(tmpc>=315 && tmpc<=355) {
             // GREEN
             tint(255, 255/20*(20-Math.abs(tmpc-335)))
-            image(spot, 130, 321)
             image(particleC, 317, 80, 25,25)
-            image(Y_XY_M, 158, 275)
-            image(Y_XY_S, 158, 250)
-            image(G_M, 235, 208)
-            image(G_X_S, 341, 190)
-            image(G_XY_S, 235, 190)
-            image(G_D, 370, 167)
+            image(Yellow_beam_xy, 122, 257,146,97)
+            image(Green_beam, 230, 147)
+            image(spot, 130, 321)
         }
         if(tmpd>=315 && tmpd<=355) {
             // GREEN-YELLOW
             tint(255, 255/20*(20-Math.abs(tmpd-335)))
-            image(spot, 130, 321)
             image(particleD, 317, 45, 25,25)
-            image(Y_XY_M, 158, 275)
-            image(Y_M, 245, 275)
-            image(Y_XY_S, 158, 250)
-            image(Y_X_S, 245, 260)
-            image(Y_D, 370, 240)
-            image(G_M, 235, 208)
-            image(G_X_S, 341, 190)
-            image(G_XY_S, 235, 190)
-            image(G_D, 370, 167)
+            image(Yellow_beam_xy, 122, 257,146,97)
+            image(Yellow_beam_x, 243, 247)
+            image(Green_beam, 230, 142)
+            image(spot, 130, 321)
         }
     }
 }

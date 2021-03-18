@@ -4,28 +4,22 @@ function setup(){
     createCanvas(551, 431);
     textFont("Arial")
     textStyle(BOLD)
-    static_bg = loadImage("./assert/Static_Bg.svg")
-    beam_blue = loadImage("./assert/Beam_Blue.png")
-    test_flow = loadImage("./assert/test_flow.svg")
-    spot = loadImage("./assert/spot.svg")
+    static_bg = loadImage("./assets/Static_Bg.svg")
+    beam_blue = loadImage("./assets/Beam_Blue.png")
+    test_flow = loadImage("./assets/test_flow.svg")
+    spot = loadImage("./assets/spot.svg")
 
-    G_D = loadImage("./assert/G_D.svg")
-    G_M = loadImage("./assert/G_M.svg")
-    G_X_S = loadImage("./assert/G_X_S.svg")
-    G_XY_S = loadImage("./assert/G_XY_S.svg")
-    Y_D = loadImage("./assert/Y_D.svg")
-    Y_M = loadImage("./assert/Y_M.svg")
-    Y_X_S = loadImage("./assert/Y_X_S.svg")
-    Y_XY_M = loadImage("./assert/Y_XY_M.svg")
-    Y_XY_S = loadImage("./assert/Y_XY_S.svg")
+    Green_beam = loadImage("./assets/Green_beam.png")
+    Yellow_beam_xy = loadImage("./assets/Yellow_beam_xy.png")
+    Yellow_beam_x = loadImage("./assets/Yellow_beam_x.png")
 
-    particleA = loadImage("./assert/ParticleA.svg")
-    particleB = loadImage("./assert/ParticleB.svg")
-    particleC = loadImage("./assert/ParticleC.svg")
-    particleD = loadImage("./assert/ParticleD.svg")
+    particleA = loadImage("./assets/ParticleA.svg")
+    particleB = loadImage("./assets/ParticleB.svg")
+    particleC = loadImage("./assets/ParticleC.svg")
+    particleD = loadImage("./assets/ParticleD.svg")
 
-    tube_mask = loadImage("./assert/tube_mask.png")
-    chamber_mask = loadImage("./assert/chamber_mask.png")
+    tube_mask = loadImage("./assets/tube_mask.png")
+    chamber_mask = loadImage("./assets/chamber_mask.png")
 
     laser = new Laser()
     tubes = []
@@ -56,6 +50,6 @@ function draw() {
         chamber.show()
     }
     tint(255,255)
-    image(tube_mask, 7,42)
+    image(tube_mask, 7,0)
     image(chamber_mask, 141,363)
 }

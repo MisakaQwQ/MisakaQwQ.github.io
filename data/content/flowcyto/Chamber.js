@@ -1,5 +1,5 @@
 function Chamber(){
-    this.flow = -25
+    this.flow = -50
     this.posa = 105
     this.posb = 70
     this.posc = 35

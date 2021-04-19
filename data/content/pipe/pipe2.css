@@ -1,0 +1,31 @@
+video::-webkit-media-controls{
+
+    display:none !important;
+}
+
+.main_container{
+    width:900px;
+    height: 400px;
+    margin:0 auto;
+    position: relative;
+}
+#animation{
+    width:550px;
+    height:400px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+#choice{
+    display: flex;
+    flex-direction: column;
+    width:350px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+}
+
+.form{
+    margin: 20px;
+    line-height: 30px;
+}

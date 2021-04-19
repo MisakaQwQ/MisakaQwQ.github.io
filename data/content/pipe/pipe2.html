@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管路仿真</title>
+    <script src="pipe2.js"></script>
+    <link rel="stylesheet" href="pipe2.css">
+</head>
+<body>
+    <div class="main_container">
+        <div id="animation">
+            <video poster="0.png" src="1.mp4" muted="muted" controls=false id="video" style="width: 550px; height: 400px">
+                暂无视频
+            </video>
+        </div>
+        <div id="choice">
+            <label id="title">
+                排空定量装置内液体
+            </label>
+            <form class="form" action="">
+                <div>
+                    <input type="checkbox" name="valvea" value="valvea" />阀门A
+                </div>
+                <div>
+                    <input type="checkbox" name="valveb" value="valveb" />阀门B
+                </div>
+                <div>
+                    <input type="checkbox" name="valvec" value="valvec" />阀门C
+                </div>
+                <div>
+                    <input type="checkbox" name="valved" value="valved" />阀门D
+                </div>
+                <div>
+                    <input type="checkbox" name="valvex" value="valvex" />阀门X
+                </div>
+                <div>
+                    <input type="checkbox" name="valvez" value="valvez" />阀门Z
+                </div>
+                <button type="button" onclick="judge()">确定</button>
+            </form>
+            <label id="notify">
+            </label>
+        </div>
+    </div>
+</body>
+</html>

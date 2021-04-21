@@ -29,3 +29,11 @@ video::-webkit-media-controls{
     margin: 20px;
     line-height: 30px;
 }
+
+table{
+    width: 90%;
+}
+
+td{
+    width: 50%;
+}

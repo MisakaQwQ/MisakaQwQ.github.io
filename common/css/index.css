@@ -154,42 +154,22 @@ header .index-page-hbox .user-info>.line{
 	outline: none;
 	border-radius: 20px;
 }
-header .index-page-video{
+header .index-page-swiper{
 	float: left;
-    width: 468px;
-	height: 100%;
+	left: 80px;
+	top: 50px;
+    width: 240px;
+	height: 300px;
 	overflow: hidden;
 	position: relative;
 }
-header .index-page-video video{
-    width: 350px;
-    height: 200px;
-    margin-top: 90px;
-    margin-left: 114px;
+header .index-page-swiper .img-slide{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	display: none;
 }
-header .index-page-video .video-btns{
-    position: absolute;
-    top: 50px;
-    left: 114px;
-	z-index: 2;
-	width: 350px;
-    height: 40px;	
-    overflow: hidden;	
-}
-header .index-page-video .video-btns .video-btn{
-	height: 32px;
-    border: none;
-	color: white;
-	font-size: 14px;
-    padding: 5px 10px;
-	cursor: pointer;
-	outline: none;
-	background: rgba(0,0,0,0.1);	
-    box-shadow: 5px 3px 3px #5b5b5b;
-}
-header .index-page-video .video-btns .video-checked{
-	background: #817a7a;
-}
+
 .index-page-content{
 	width:100%;
 	/*overflow: hidden;*/

@@ -71,6 +71,25 @@ function enter_simulate(){
     document.getElementsByClassName('main_container')[0].style.display = "block";
 }
 
+function next_question(){
+    clear_choice();
+    var btn = document.getElementById('animation_submit');
+    if(now_status!=9){
+        document.getElementById('title').innerHTML = '当前任务：' + title[now_status];
+        document.getElementById('notify').innerHTML = '';
+        // document.getElementById('notify').innerHTML = '下一个任务' + title[now_status];
+        clear_choice();
+        release_form();
+        btn.onclick=judge;
+        btn.innerHTML = '确定';
+    }
+}
+
+function show_result(){
+    document.getElementById('notify').innerHTML = '得分' + score;
+    document.getElementById('animation_submit').disabled=true;
+}
+
 function judge(){
     if(now_status == 9) {
         return ;
@@ -82,7 +101,7 @@ function judge(){
             now += parseInt(check[i].value);
         }
     }
-    if(correct_answer[now_status] == now)
+    if(document.getElementById('DEBUG').checked || correct_answer[now_status] == now)
     {
         lock_form();
         if(score_status[now_status] == 0) {
@@ -91,23 +110,24 @@ function judge(){
         now_status += 1
         console.log("Correct");
         document.getElementById('title').innerHTML = '当前任务：' + title[now_status - 1];
+        var btn = document.getElementById('animation_submit');
+        btn.onclick = next_question;
+        btn.innerHTML = '下一个任务'
         var video = document.getElementsByTagName("video")[0];
         video.src = now_status + '.mp4'
         video.playbackRate=5;
         video.play();
         video.addEventListener('ended', function () {
-            if(now_status==9){
-                document.getElementById('notify').innerHTML = '得分' + score;
+            if(now_status!=9){
+                btn.disabled = false;
             }
             else{
-                document.getElementById('title').innerHTML = '当前任务：' + title[now_status];
-                document.getElementById('notify').innerHTML = '';
-                // document.getElementById('notify').innerHTML = '下一个任务' + title[now_status];
-                clear_choice();
-                release_form();
+                btn.disabled=false;
+                btn.innerHTML = '查看得分';
+                btn.onclick=show_result;
             }
         }, false);
-        document.getElementById('notify').innerHTML = '选择正确';
+        document.getElementById('notify').innerHTML = '选择正确<br>解析：<br>...';
     }
     else{
         score_status[now_status] = -1

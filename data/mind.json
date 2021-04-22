@@ -1,0 +1,10 @@
+{
+  "data":[
+    {
+      "text":"思维导图",
+      "src":"./data/content/mind/mind.html",
+      "id":"mind",
+      "btn":false
+    }
+  ]
+}

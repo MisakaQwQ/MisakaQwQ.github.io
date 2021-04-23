@@ -8,7 +8,6 @@ app.controller('pageCtrl', function($scope,$http) {
     $scope.lastName= "Doe";
 	$scope.topup = false;
     $scope.tagBtns = [
-		{"name":"思维导图","sign":"mind"},
 		{"name":"项目描述","sign":"describe"},
         {"name":"血细胞分析","sign":"bloodcell",
 			"child":[{"name":"结构仿真","sign":"structure"},
@@ -96,7 +95,7 @@ app.controller('pageCtrl', function($scope,$http) {
 
         });
     };  
-	$scope.initialize("mind");
+	$scope.initialize("describe");
     $scope.tagBtn = function(index,sign){
     	  $scope.optsVariable = -1;
           $scope.btnsVariable = index;

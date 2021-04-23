@@ -31,17 +31,26 @@
                 <!-- <li>负责人：黄世清</li> -->
             </ul>
             <div class="index-page-info-description">
-                医用检验仪器是一门专业技术课，涉及到生物医学工程中所学的光、机、电、液、气等各学科的应用。本课程的任务是使学生了解和掌握目前临床上常用的各类检验仪器（血细胞分析技术、流式细胞分析技术、电解质分析技术等）的基本工作原理、主要结构、电路分析和使用方法等。旨在为学生日后从事相关工作打下必要的基础。
-                针对检验仪器的动手实验具有血液、尿液、体液等生化感染风险、且血液购买困难，每次购买使用的用量很难精确控制，用完后的剩余量难以处置，学生操作不当不仅会造成人群传染还会污染实验区等，每次用完后的清洗易难试剂成本高昂等方面，不便开展实物实验的问题；以及部分学生对实验有血液等生化检验实验恐惧心理。所以充分利用检验仪器的三维建模、人机交互、虚拟现实等数字化仿真技术手段，提高实验教学项目的吸引力，培养学生应用现代设计工具进行仿真设计、虚拟模拟、创新设计的基本功锻炼。
-                本虚拟仿真实验项目对以上光路、气路、液路、电路、机械结构在原理上进行高相似性的仿真，还原和再现其工作原理。
+<!--                <div class="index-page-swiper">-->
+<!--                    <img class="img-slide img" src="common/images/1.png" alt="img1">-->
+<!--                    <img class="img-slide img" src="common/images/2.png" alt="img2">-->
+<!--                    <img class="img-slide img" src="common/images/3.png" alt="img3">-->
+<!--                    <img class="img-slide img" src="common/images/4.jpg" alt="img4">-->
+<!--                    <img class="img-slide img" src="common/images/5.jpg" alt="img5">-->
+<!--                </div>-->
+                <div id="scroll_div" class="scroll_div">
+                    <div id="scroll_begin">
+                        <ul>
+                            <li><img src="common/images/1.png" alt=""></li>
+                            <li><img src="common/images/2.png" alt=""></li>
+                            <li><img src="common/images/3.png" alt=""></li>
+                            <li><img src="common/images/4.jpg" alt=""></li>
+                            <li><img src="common/images/5.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                    <div id="scroll_end"></div>
+                </div>
             </div>
-        </div>
-        <div class="index-page-swiper">
-            <img class="img-slide img" src="common/images/1.png" alt="img1">
-            <img class="img-slide img" src="common/images/2.png" alt="img2">
-            <img class="img-slide img" src="common/images/3.png" alt="img3">
-            <img class="img-slide img" src="common/images/4.jpg" alt="img4">
-            <img class="img-slide img" src="common/images/5.jpg" alt="img5">
         </div>
     </div>
 </header>
@@ -86,27 +95,54 @@
 </div>
 </body>
 <script type="text/javascript">
-    // index：索引， len：长度
-    var index = 0, len;
-    // 类似获取一个元素数组
-    var imgBox = document.getElementsByClassName("img-slide");
-    len = imgBox.length;
-    imgBox[index].style.display = 'block';
-    // 逻辑控制函数
-    function slideShow() {
-        index ++;
-        // 防止数组溢出
-        if(index >= len) index = 0;
-        // 遍历每一个元素
-        for(var i=0; i<len; i++) {
-            imgBox[i].style.display = 'none';
+    // // index：索引， len：长度
+    // var index = 0, len;
+    // // 类似获取一个元素数组
+    // var imgBox = document.getElementsByClassName("img-slide");
+    // len = imgBox.length;
+    // imgBox[index].style.display = 'block';
+    // // 逻辑控制函数
+    // function slideShow() {
+    //     index ++;
+    //     // 防止数组溢出
+    //     if(index >= len) index = 0;
+    //     // 遍历每一个元素
+    //     for(var i=0; i<len; i++) {
+    //         imgBox[i].style.display = 'none';
+    //     }
+    //     // 每次只有一张图片显示
+    //     imgBox[index].style.display = 'block';
+    // }
+    //
+    // // 定时器，间隔3s切换图片
+    // setInterval(slideShow, 3000);
+    function ScrollImgLeft(){
+        var speed=-5;
+        var scroll_begin = document.getElementById("scroll_begin");
+        var scroll_end = document.getElementById("scroll_end");
+        var scroll_div = document.getElementById("scroll_div");
+        scroll_end.innerHTML=scroll_begin.innerHTML;
+        function Marquee(){
+            if(scroll_end.offsetWidth-scroll_div.scrollLeft<=0)
+            {
+                scroll_div.scrollLeft-=scroll_begin.offsetWidth;
+            }
+            else
+            {
+                scroll_div.scrollLeft++;
+            }
         }
-        // 每次只有一张图片显示
-        imgBox[index].style.display = 'block';
+        var MyMar=setInterval(Marquee,speed);
+        scroll_div.onmouseover=function()
+        {
+            clearInterval(MyMar);
+        }
+        scroll_div.onmouseout=function()
+        {
+            MyMar=setInterval(Marquee,speed);
+        }
     }
-
-    // 定时器，间隔3s切换图片
-    setInterval(slideShow, 3000);
-
+    ScrollImgLeft();
 </script>
+
 </html>
